@@ -1,0 +1,1014 @@
+/* =========================================================
+   RESET
+========================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,body{
+
+    width:100%;
+    height:100%;
+
+    overflow:hidden;
+
+    font-family:"Poppins",sans-serif;
+
+    background:#040816;
+
+    color:white;
+
+}
+
+/* =========================================================
+   SKY
+========================================================= */
+
+#sky{
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+    z-index:0;
+
+
+    inset:0;
+
+    overflow:hidden;
+
+    background:
+
+        radial-gradient(circle at top,#16315d 0%,#081321 55%,#03050c 100%);
+
+  
+
+}
+
+/* =========================================================
+   STAR LAYERS
+========================================================= */
+
+#farStars,
+#midStars,
+#nearStars{
+
+    position:absolute;
+
+    inset:0;
+
+}
+
+.star{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    background:white;
+
+    animation:twinkle linear infinite;
+
+}
+
+@keyframes twinkle{
+
+    0%,100%{
+
+        opacity:.25;
+
+        transform:scale(.8);
+
+    }
+
+    50%{
+
+        opacity:1;
+
+        transform:scale(1.4);
+
+    }
+
+}
+
+/* =========================================================
+   NEBULA
+========================================================= */
+
+#nebula{
+
+    position:absolute;
+
+    inset:0;
+
+    filter:blur(120px);
+
+    opacity:.8;
+
+    background:
+
+        radial-gradient(circle at 15% 25%,
+        rgba(150,80,255,.18),
+        transparent 35%),
+
+        radial-gradient(circle at 70% 20%,
+        rgba(0,180,255,.16),
+        transparent 35%),
+
+        radial-gradient(circle at 60% 80%,
+        rgba(255,60,160,.12),
+        transparent 40%);
+
+    animation:nebulaMove 25s ease-in-out infinite alternate;
+
+}
+
+@keyframes nebulaMove{
+
+    from{
+
+        transform:translate(-40px,-30px);
+
+    }
+
+    to{
+
+        transform:translate(40px,20px);
+
+    }
+
+}
+
+/* =========================================================
+   MOON
+========================================================= */
+
+#moon{
+
+    position:fixed;
+
+    width:185px;
+    height:185px;
+
+    top:55px;
+    right:65px;
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(circle at 30% 30%,
+        #ffffff,
+        #fff3c5);
+
+    box-shadow:
+
+        0 0 40px rgba(255,250,190,.9),
+
+        0 0 90px rgba(255,245,180,.6),
+
+        0 0 180px rgba(255,245,180,.25);
+
+    animation:moonFloat 8s ease-in-out infinite;
+
+    z-index:-5;
+
+}
+
+@keyframes moonFloat{
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+}
+
+.crater{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    background:rgba(190,190,190,.15);
+
+}
+
+.c1{
+
+    width:22px;
+    height:22px;
+
+    top:32px;
+    left:40px;
+
+}
+
+.c2{
+
+    width:32px;
+    height:32px;
+
+    top:60px;
+    right:32px;
+
+}
+
+.c3{
+
+    width:18px;
+    height:18px;
+
+    bottom:40px;
+    left:80px;
+
+}
+
+.c4{
+
+    width:24px;
+    height:24px;
+
+    bottom:30px;
+    right:30px;
+
+}
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+#intro{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:10;
+
+    transition:1.2s;
+
+}
+
+.glass{
+
+    width:760px;
+
+    max-width:92%;
+
+    padding:70px;
+
+    text-align:center;
+
+    border-radius:32px;
+
+    background:
+
+        linear-gradient(
+        145deg,
+        rgba(40,45,70,.78),
+        rgba(28,32,52,.72)
+        );
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.14);
+
+    box-shadow:
+
+        0 35px 80px rgba(0,0,0,.45);
+
+    transition:.5s;
+
+}
+
+.glass:hover{
+
+    transform:
+
+        translateY(-4px);
+
+}
+
+.glass h3{
+
+    color:#ffd977;
+
+    letter-spacing:7px;
+
+    font-size:18px;
+
+    margin-bottom:28px;
+
+}
+
+.glass h1{
+
+    font-size:74px;
+
+    font-weight:700;
+
+    margin-bottom:26px;
+
+}
+
+.glass p{
+
+    width:80%;
+
+    margin:auto;
+
+    line-height:1.8;
+
+    font-size:25px;
+
+    color:#ececec;
+
+}
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+#beginBtn{
+
+    margin-top:45px;
+
+    padding:18px 55px;
+
+    border:none;
+
+    border-radius:999px;
+
+    cursor:pointer;
+
+    color:white;
+
+    font-size:22px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #ff69b4,
+            #ff4f96
+        );
+
+    box-shadow:
+
+        0 0 25px rgba(255,105,180,.5);
+
+    transition:.35s;
+
+}
+
+#beginBtn:hover{
+
+    transform:
+
+        translateY(-4px)
+        scale(1.05);
+
+    box-shadow:
+
+        0 0 40px rgba(255,105,180,.8),
+
+        0 0 80px rgba(255,105,180,.35);
+
+}
+
+.fadeOut{
+
+    opacity:0;
+
+    pointer-events:none;
+
+}
+
+/* =========================================================
+   MEMORIES
+========================================================= */
+
+#memories{
+
+    position:absolute;
+
+    inset:0;
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:10;
+
+}
+
+/* One memory occupies the whole screen */
+
+.memory{
+
+    position:absolute;
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:100px;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transform:translateY(30px);
+
+    transition:
+        opacity .8s ease,
+        transform .8s ease;
+
+}
+
+.memory.active{
+
+    opacity:1;
+
+    visibility:visible;
+
+    transform:translateY(0);
+
+}
+
+/* =========================================================
+   POLAROID
+========================================================= */
+
+.polaroid{
+
+    width:370px;
+
+    background:white;
+
+    padding:18px 18px 75px;
+
+    border-radius:4px;
+
+    box-shadow:
+
+        0 35px 80px rgba(0,0,0,.45);
+
+    transform:rotate(-3deg);
+
+    transition:.45s;
+
+}
+
+.polaroid:hover{
+
+    transform:
+
+        rotate(3deg)
+        scale(1.05)
+        translateY(-12px);
+
+    box-shadow:
+
+        0 45px 100px rgba(0,0,0,.6);
+
+}
+
+.polaroid img{
+
+    width:100%;
+
+    height:460px;
+
+    object-fit:cover;
+
+    display:block;
+
+}
+
+.polaroid span{
+
+    display:block;
+
+    margin-top:22px;
+
+    text-align:center;
+
+    color:#444;
+
+    font-size:28px;
+
+    font-family:"Caveat",cursive;
+
+}
+
+/* =========================================================
+   MEMORY TEXT
+========================================================= */
+
+.text{
+
+    width:520px;
+
+}
+
+.text h2{
+
+    font-size:54px;
+
+    margin-bottom:30px;
+
+}
+
+.text p{
+
+    font-size:22px;
+
+    line-height:1.9;
+
+    color:#eeeeee;
+
+    opacity:0;
+
+    animation:textFade 1.2s forwards;
+
+    animation-delay:.5s;
+
+}
+
+@keyframes textFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* =========================================================
+   CONTROLS
+========================================================= */
+
+#controls{
+
+    position:absolute;
+
+    bottom:50px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    display:flex;
+
+    align-items:center;
+
+    gap:35px;
+
+}
+
+#controls button{
+
+    padding:15px 32px;
+
+    border:none;
+
+    border-radius:999px;
+
+    cursor:pointer;
+
+    font-size:17px;
+
+    color:white;
+
+    background:
+
+        rgba(255,255,255,.08);
+
+    backdrop-filter:blur(14px);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    transition:.35s;
+
+}
+
+#controls button:hover{
+
+    background:
+
+        rgba(255,255,255,.18);
+
+    transform:translateY(-3px);
+
+}
+
+#counter{
+
+    font-size:18px;
+
+    letter-spacing:3px;
+
+    color:#ffd87c;
+
+}
+
+/* =========================================================
+   SHOOTING STAR
+========================================================= */
+
+.shooting{
+
+    position:absolute;
+
+    width:220px;
+    height:2px;
+
+    background:
+
+        linear-gradient(
+            to left,
+            white,
+            rgba(255,255,255,.7),
+            transparent
+        );
+
+    transform:rotate(-35deg);
+
+    animation:shoot 1.4s linear forwards;
+
+}
+
+@keyframes shoot{
+
+    from{
+
+        opacity:1;
+
+        transform:
+            translateX(0)
+            rotate(-35deg);
+
+    }
+
+    to{
+
+        opacity:0;
+
+        transform:
+            translate(-500px,260px)
+            rotate(-35deg);
+
+    }
+
+}
+
+/* =========================================================
+   FIREFLIES
+========================================================= */
+
+#fireflies{
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    z-index:-3;
+
+}
+
+.firefly{
+
+    position:absolute;
+
+    width:4px;
+    height:4px;
+
+    border-radius:50%;
+
+    background:#ffe96d;
+
+    box-shadow:
+
+        0 0 10px #ffe96d,
+
+        0 0 22px #ffe96d,
+
+        0 0 40px #ffe96d;
+
+    animation:firefly linear infinite;
+
+}
+
+@keyframes firefly{
+
+    from{
+
+        transform:
+            translateY(100vh)
+            translateX(0);
+
+        opacity:0;
+
+    }
+
+    15%{
+
+        opacity:1;
+
+    }
+
+    85%{
+
+        opacity:1;
+
+    }
+
+    to{
+
+        transform:
+            translateY(-150px)
+            translateX(90px);
+
+        opacity:0;
+
+    }
+
+}
+
+/* =========================================================
+   FADE ANIMATIONS
+========================================================= */
+
+.fadeOut{
+
+    animation:fadeOut .9s forwards;
+
+}
+
+.fadeIn{
+
+    animation:fadeIn .9s forwards;
+
+}
+
+@keyframes fadeOut{
+
+    from{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+    to{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* =========================================================
+   ENDING
+========================================================= */
+
+#ending{
+
+    position:absolute;
+
+    inset:0;
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-direction:column;
+
+    text-align:center;
+
+    z-index:10;
+
+}
+
+.endingBox{
+
+    width:900px;
+
+    max-width:90%;
+
+}
+
+.endingBox h1{
+
+    font-size:72px;
+
+    margin-bottom:40px;
+
+    font-family:"Caveat",cursive;
+
+}
+
+#letter{
+
+    font-size:24px;
+
+    line-height:2;
+
+    color:#eeeeee;
+
+    min-height:280px;
+
+}
+
+#relationship{
+
+    margin-top:70px;
+
+}
+
+#relationship h3{
+
+    font-weight:400;
+
+    margin-bottom:20px;
+
+    color:#ffd977;
+
+}
+
+#timer{
+
+    font-size:38px;
+
+    font-weight:700;
+
+    line-height:1.6;
+
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:900px){
+
+.memory{
+
+    flex-direction:column;
+
+    gap:40px;
+
+}
+
+.polaroid{
+
+    width:300px;
+
+}
+
+.polaroid img{
+
+    height:360px;
+
+}
+
+.text{
+
+    width:90%;
+
+    text-align:center;
+
+}
+
+.text h2{
+
+    font-size:38px;
+
+}
+
+.text p{
+
+    font-size:18px;
+
+}
+
+.glass{
+
+    padding:40px;
+
+}
+
+.glass h1{
+
+    font-size:52px;
+
+}
+
+.glass p{
+
+    width:100%;
+
+    font-size:18px;
+
+}
+
+#moon{
+
+    width:130px;
+    height:130px;
+
+}
+
+}
+
+/* Floating Hearts */
+
+.heart{
+
+    position:absolute;
+
+    bottom:-40px;
+
+    animation:floatHeart 6s linear forwards;
+
+    pointer-events:none;
+
+}
+
+@keyframes floatHeart{
+
+    from{
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+        opacity:1;
+
+    }
+
+    to{
+
+        transform:
+            translateY(-110vh)
+            rotate(40deg);
+
+        opacity:0;
+
+    }
+
+}
