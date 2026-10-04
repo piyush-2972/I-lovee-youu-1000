@@ -366,7 +366,7 @@ new Date(2025,6,5,0,0,0)
 
 */
 
-const togetherSince = new Date(2025,7,5,23,35,0);
+const togetherSince = new Date(2025,6,5,23,35,0);
 
 function startCounter(){
 
